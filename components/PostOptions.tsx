@@ -119,7 +119,7 @@ function PostOptions({
           <MessageCircle
             className={cn(
               "mr-1",
-              isCommentsOpen && "text-gray-600 fill-gray-600"
+              isCommentsOpen && " text-foreground fill-foreground"
             )}
           />
           Comment

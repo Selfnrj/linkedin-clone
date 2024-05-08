@@ -54,7 +54,7 @@ function PostForm() {
             error: (e) => "Error creating post: " + e.message,
           });
         }}
-        className="p-3 bg-white rounded-lg border"
+        className="p-3 rounded-lg border bg-card"
       >
         <div className="flex items-center space-x-2">
           <Avatar>
@@ -69,7 +69,7 @@ function PostForm() {
             type="text"
             name="postInput"
             placeholder="Start writing a post..."
-            className="flex-1 outline-none rounded-full py-3 px-4 border"
+            className="flex-1 bg-transparent outline-none rounded-full py-3 px-4 border"
           />
 
           {/* add input file selector for images only */}
@@ -118,7 +118,7 @@ function PostForm() {
         </div>
       </form>
 
-      <hr className="mt-2 border-gray-300" />
+      <hr className="mt-2" />
     </div>
   );
 }

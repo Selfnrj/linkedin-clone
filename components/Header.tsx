@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 function Header() {
   return (
@@ -22,10 +23,10 @@ function Header() {
       />
       <div className="flex-1">
         <form
-          className="flex items-center space-x-1 bg-gray-100 p-2 rounded-md flex-1 mx-2 max-w-96"
+          className="flex border items-center space-x-1 p-2 rounded-md flex-1 mx-2 max-w-96"
           action=""
         >
-          <SearchIcon className="h-4 text-gray-600" />
+          <SearchIcon className="h-4" />
           <input
             type="text"
             placeholder="Search..."
@@ -51,6 +52,7 @@ function Header() {
           <MessagesSquare className="h-5" />
           <p>Messaging</p>
         </Link>
+        <ModeToggle />
         <SignedIn>
           <UserButton />
         </SignedIn>

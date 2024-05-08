@@ -17,7 +17,7 @@ function Post({ post }: { post: IPostDocument }) {
 
   const isAuthor = user?.id === post.user.userId;
   return (
-    <div className="bg-white rounded-md border">
+    <div className="rounded-md border bg-card">
       <div className="p-4 flex space-x-2">
         <div>
           <Avatar>

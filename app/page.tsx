@@ -14,7 +14,7 @@ export default async function Home() {
   console.log("posts", posts);
 
   return (
-    <div className="grid grid-cols-8 mt-5 sm:px-5">
+    <div className="grid grid-cols-8 mt-5 max-w-6xl mx-auto">
       <section className="hidden md:inline md:col-span-2">
         <UserInformation />
       </section>

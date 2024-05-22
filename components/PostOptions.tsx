@@ -10,6 +10,7 @@ import { IPostDocument } from "@/mongodb/models/post";
 import { cn } from "@/lib/utils";
 import { UnlikePostRequestBody } from "@/app/api/posts/[post_id]/unlike/route";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 function PostOptions({
   postId,
@@ -102,7 +103,15 @@ function PostOptions({
         <Button
           variant="ghost"
           className="postButton"
-          onClick={likeOrUnlikePost}
+          onClick={() => {
+            const promise = likeOrUnlikePost();
+
+            toast.promise(promise, {
+              loading: liked ? "Unliking post..." : "Liking post...",
+              success: liked ? "Post unliked" : "Post liked",
+              error: liked ? "Failed to unlike post" : "Failed to like post",
+            });
+          }}
         >
           {/* If user has liked the post, show filled thumbs up icon */}
           <ThumbsUpIcon
